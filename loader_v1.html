@@ -1,0 +1,36 @@
+<div id="loader">
+  <img src="https://drive.google.com/file/d/1HxV-ESSS9SmKuNcUFe-MjMv0btmRzYgy/preview" alt="Altruist & Co." id="logo">
+</div>
+
+<style>
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-color: steelblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  #logo {
+    width: 150px; /* Adjust size */
+    animation: fadeInOut 2s ease-in-out;
+  }
+
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+</style>
+
+<script>
+  // Hide loader after animation
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+  }, 2000); // Matches animation duration
+</script>
